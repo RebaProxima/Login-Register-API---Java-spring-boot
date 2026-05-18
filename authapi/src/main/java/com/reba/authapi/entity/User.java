@@ -2,14 +2,12 @@ package com.reba.authapi.entity;
 
 import jakarta.persistence.*;
 
-
-@Entity//Marks the class as database entry
+@Entity
 @Table(name = "users")
-public class user{
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
     private String fullName;
@@ -28,4 +26,19 @@ public class user{
         this.password = password;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }
